@@ -1,3 +1,4 @@
+package wyklad_26_10;
 import java.util.ArrayList;
 
 public class Main

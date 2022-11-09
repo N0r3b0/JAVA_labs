@@ -1,3 +1,4 @@
+package wyklad_26_10;
 import java.lang.management.OperatingSystemMXBean;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public class Interfejs
         };
         Person o = new Person();
         zbior.dodaj(o);
-        for(int i = 0; i<; i++)
+        for(int i = 0; i<5; i++)
         {
             System.out.println(zbior.klkcja.get(i));
         }
