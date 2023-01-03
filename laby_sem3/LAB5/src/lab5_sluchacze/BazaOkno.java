@@ -12,12 +12,12 @@ public class BazaOkno extends JFrame
     static final long serialVersionUID = 0;
     int szerokosc = 400;
     int wysokosc = 400;
-    int poczp = 60;
+    int poczp = 60; //lewy górny róg
     int szerokoscK = szerokosc/2;
     int wysokoscK = wysokosc/2;
     int szerK = szerokoscK/3;
     int wysK = wysokoscK/12;
-
+//et - etykieta, szerK - szerokosc klawiatury
     JButton przycisk;
     JLabel et;
     JTextField poletekstowe;
@@ -32,10 +32,20 @@ public class BazaOkno extends JFrame
         et.setBounds(szerokoscK-szerK, poczp+2*wysK, szerK*2, obrazek.getIconHeight());
         et.setIcon(obrazek);
         poletekstowe = new JTextField("Witam w UMG");
-        poletekstowe.setBounds(szerokoscK-szerK, poczp+wysK/2, szerK*2, wysK);
+        poletekstowe.setBounds(szerokoscK-szerK, poczp-wysK/2, szerK*2, wysK);
         poletekstowe.setFont(czcionka);
 
         add(przycisk);
         add(poletekstowe);
+        add(et);
+
+        this.setSize(szerokosc, wysokosc);
+        this.setLayout(null);
+        this.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        BazaOkno o1 = new BazaOkno();
+        Klawiatura k1 = new Klawiatura();
     }
 }
